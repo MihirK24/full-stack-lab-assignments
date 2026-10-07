@@ -1,0 +1,480 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f3f6fa;
+  color: #263238;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* =========================
+   DASHBOARD HEADER
+   ========================= */
+
+.dashboard-header {
+  background: linear-gradient(135deg, #283593, #3949ab);
+  color: white;
+  padding: 20px 15px;
+  text-align: center;
+  border-bottom: 5px solid #e8eaf6;
+}
+
+.header-content {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* .course-label {
+  font-size: 13px;
+  letter-spacing: 2px;
+  opacity: 0.85;
+  margin-bottom: 14px;
+} */
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.dashboard-header p {
+  margin: 12px 0 0;
+  font-size: 17px;
+  opacity: 0.9;
+}
+
+/* =========================
+   ASSIGNMENT SECTION
+   ========================= */
+
+.assignment-section {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 45px 0 55px;
+}
+
+.section-title {
+  margin-bottom: 30px;
+}
+
+.section-title span {
+  display: inline-block;
+  margin-bottom: 7px;
+  color: #5e35b1;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.section-title h2 {
+  margin: 0;
+  font-size: 28px;
+  color: #263238;
+}
+
+.section-title p {
+  margin-top: 8px;
+  color: #6b7280;
+}
+
+/* =========================
+   ASSIGNMENT CARDS
+   ========================= */
+
+.assignment-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.assignment-card {
+  position: relative;
+  background: #ffffff;
+  padding: 28px;
+  border: 1px solid #e1e5eb;
+  border-radius: 12px;
+  box-shadow: 0 5px 16px rgba(38, 50, 56, 0.07);
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+.assignment-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: #5e35b1;
+}
+
+.assignment-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 9px 22px rgba(38, 50, 56, 0.11);
+}
+
+.assignment-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 38px;
+  margin-bottom: 17px;
+  border-radius: 8px;
+  background: #ede7f6;
+  color: #5e35b1;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.assignment-card h2 {
+  margin: 0 0 10px;
+  font-size: 22px;
+  color: #263238;
+}
+
+.assignment-card p {
+  min-height: 45px;
+  margin: 0 0 24px;
+  color: #68747d;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.assignment-card button {
+  padding: 11px 18px;
+  border-radius: 7px;
+  background: #3949ab;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.assignment-card button:hover {
+  background: #283593;
+}
+
+/* =========================
+   ASSIGNMENT PAGE
+   ========================= */
+
+.assignment-page {
+  min-height: 100vh;
+  padding: 30px 20px 60px;
+  background: #f3f6fa;
+}
+
+.back-button {
+  padding: 10px 17px;
+  margin-bottom: 25px;
+  border-radius: 7px;
+  background: #455a64;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.back-button:hover {
+  background: #37474f;
+}
+
+.assignment-container {
+  width: 90%;
+  max-width: 700px;
+  margin: 0 auto;
+  background: white;
+  padding: 35px;
+  border-radius: 12px;
+  border: 1px solid #e1e5eb;
+  box-shadow: 0 5px 18px rgba(38, 50, 56, 0.08);
+}
+
+.assignment-container h2 {
+  margin-top: 0;
+  color: #283593;
+}
+
+.assignment-description {
+  color: #68747d;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* =========================
+   INPUTS
+   ========================= */
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: 600;
+  color: #37474f;
+}
+
+.input-group input,
+.input-group select,
+.todo-input input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cfd6dd;
+  border-radius: 7px;
+  font-size: 15px;
+  outline: none;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.todo-input input:focus {
+  border-color: #5e35b1;
+  box-shadow: 0 0 0 2px #ede7f6;
+}
+
+/* =========================
+   BUTTONS
+   ========================= */
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.button-group button,
+.todo-input button,
+.counter-buttons button {
+  padding: 11px 18px;
+  border: none;
+  border-radius: 7px;
+  background: #3949ab;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.button-group button:hover,
+.todo-input button:hover,
+.counter-buttons button:hover {
+  background: #283593;
+}
+
+.clear-button {
+  background: #607d8b !important;
+}
+
+.clear-button:hover {
+  background: #455a64 !important;
+}
+
+/* =========================
+   TODO LIST
+   ========================= */
+
+.todo-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.todo-input input {
+  flex: 1;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 14px;
+  border: 1px solid #e1e5eb;
+  border-radius: 8px;
+  background: #fafbfc;
+}
+
+.task-item span {
+  flex: 1;
+}
+
+.task-item.completed span {
+  text-decoration: line-through;
+  color: #9aa4ad;
+}
+
+.task-item button {
+  margin-left: 7px;
+  padding: 7px 11px;
+  border: none;
+  border-radius: 6px;
+  background: #3949ab;
+  color: white;
+}
+
+.task-item button:last-child {
+  background: #e53935;
+}
+
+/* =========================
+   PROFILE CARD
+   ========================= */
+
+.profile-card {
+  max-width: 320px;
+  margin: 30px auto 0;
+  padding: 25px;
+  text-align: center;
+  border-radius: 12px;
+  background: #fafbfc;
+  border: 1px solid #e1e5eb;
+}
+
+.profile-image {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 4px solid #ede7f6;
+}
+
+.profile-card h3 {
+  margin: 5px 0 10px;
+  color: #283593;
+}
+
+.profile-card p {
+  color: #68747d;
+  line-height: 1.6;
+}
+
+/* =========================
+   VALIDATION
+   ========================= */
+
+.error-message {
+  margin: 5px 0 0;
+  color: #d32f2f;
+  font-size: 13px;
+}
+
+.success-message {
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 7px;
+  background: #e8f5e9;
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+/* =========================
+   LIVE PREVIEW
+   ========================= */
+
+.live-preview {
+  margin-top: 30px;
+  padding: 22px;
+  border-radius: 10px;
+  background: #f8f9fb;
+  border: 1px solid #e1e5eb;
+}
+
+.live-preview h3 {
+  margin-top: 0;
+  color: #5e35b1;
+}
+
+.live-preview p {
+  margin: 10px 0;
+}
+
+/* =========================
+   COUNTER
+   ========================= */
+
+.counter-container {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.counter-value {
+  font-size: 70px;
+  font-weight: 700;
+  color: #5e35b1;
+  margin-bottom: 30px;
+}
+
+.counter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.dashboard-footer {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 0;
+  border-top: 1px solid #dce1e6;
+  display: flex;
+  justify-content: space-between;
+  color: #7a858d;
+  font-size: 12px;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 700px) {
+  .assignment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-header h1 {
+    font-size: 32px;
+  }
+
+  .assignment-container {
+    width: 100%;
+    padding: 25px;
+  }
+
+  .todo-input {
+    flex-direction: column;
+  }
+
+  .task-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .counter-buttons {
+    flex-direction: column;
+  }
+
+  .dashboard-footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
