@@ -19,7 +19,6 @@ function Assignment3Validation() {
       [name]: value,
     });
 
-    // Remove the error for the field while typing
     setErrors({
       ...errors,
       [name]: "",
@@ -31,14 +30,12 @@ function Assignment3Validation() {
   function validateForm() {
     const newErrors = {};
 
-    // Name validation
     if (formData.name.trim() === "") {
       newErrors.name = "Name is required.";
     } else if (formData.name.trim().length < 3) {
       newErrors.name = "Name must contain at least 3 characters.";
     }
 
-    // Email validation
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (formData.email.trim() === "") {
@@ -47,7 +44,6 @@ function Assignment3Validation() {
       newErrors.email = "Enter a valid email address.";
     }
 
-    // Phone validation
     const phonePattern = /^[0-9]{10}$/;
 
     if (formData.phone.trim() === "") {
@@ -56,7 +52,6 @@ function Assignment3Validation() {
       newErrors.phone = "Phone number must contain exactly 10 digits.";
     }
 
-    // Password validation
     if (formData.password === "") {
       newErrors.password = "Password is required.";
     } else if (formData.password.length < 6) {

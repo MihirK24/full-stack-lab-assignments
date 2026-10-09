@@ -4,7 +4,6 @@ function Assignment2Todo() {
   const [task, setTask] = useState("");
   const [tasks, setTasks] = useState([]);
 
-  // Add a new task
   function addTask() {
     if (task.trim() === "") {
       return;
@@ -20,7 +19,6 @@ function Assignment2Todo() {
     setTask("");
   }
 
-  // Mark task as completed
   function toggleTask(id) {
     setTasks(
       tasks.map((item) =>
@@ -31,7 +29,6 @@ function Assignment2Todo() {
     );
   }
 
-  // Delete a task
   function deleteTask(id) {
     setTasks(tasks.filter((item) => item.id !== id));
   }

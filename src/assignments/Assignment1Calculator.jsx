@@ -6,7 +6,6 @@ function Assignment1Calculator() {
   const [operator, setOperator] = useState("+");
   const [result, setResult] = useState("");
 
-  // JavaScript functions for arithmetic operations
   function add(a, b) {
     return a + b;
   }
@@ -27,13 +26,11 @@ function Assignment1Calculator() {
     const a = Number(num1);
     const b = Number(num2);
 
-    // Check for valid numbers
     if (num1 === "" || num2 === "") {
       setResult("Please enter both numbers.");
       return;
     }
 
-    // Switch statement to select the operation
     switch (operator) {
       case "+":
         setResult(add(a, b));
