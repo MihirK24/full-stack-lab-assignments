@@ -12,7 +12,7 @@ function Assignment4Profile() {
 
       <ProfileCard
         name="Mihir Katare"
-        image="/full-stack-lab-assignments/profile.jpeg"
+        image="/full-stack-lab-assignments/public/profile.jpeg"
         description="MCA Student interested in web development and software engineering."
       />
     </div>
